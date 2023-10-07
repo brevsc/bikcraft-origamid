@@ -9,7 +9,7 @@ body {
   display: grid;
   gap: 3.75rem;
   justify-items: center;
-  
+
 }
 
 .bike{
@@ -50,6 +50,12 @@ p{
   color: #000000;
   text-transform: uppercase;
   display: block;
+  border: 0.0625rem solid #fff;
+}
+
+.links a:hover{
+  border-color: #e21;
+  transition: 0.1s ease-in;
 }
 
 .conteudo{
@@ -69,13 +75,18 @@ p{
   justify-items: end;
 }
 
-.detail{
+.introducao h1{
+  position: relative;
+}
+
+.detail::after{
+  content: "";
   width: 3.75rem;
   height: 0.25rem;
   background: #e21;
   position: absolute;
-  top: 1.875rem;
-  right: -1.875rem;
+  top: -3.125rem;
+  right: -4.375rem;
 }
 
 .button{
@@ -84,21 +95,31 @@ p{
   padding: 0.9375rem 1.875rem;
   border-radius: 0.25rem;
   text-transform: uppercase;
+  
+}
+
+.button:hover{
+  background: #c01000;
+  transition: 0.3s ease-out;
 }
 
 .subtitulo{
+  background: url('./img/onda.svg');
   font-size: 4rem;
   text-transform: uppercase;
   color: rgba(0,0,0,0.2);
   text-align: right;
   padding: 2.5rem;
-  align-self: center;
+  place-self: center;
 }	
 
 .vantagens{
   background: #fff;
   padding: 2.5rem;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .vantagens-item{
@@ -108,21 +129,29 @@ p{
   padding: 1.25rem;
 }
 
+
+.vantagens-item:hover{
+  border-left: 0.3125rem solid #e21;
+  
+}
+
+.vantagens-item:nth-child(odd){
+  background: #f7f7f7;
+}
+
 .vantagens-item p{
   grid-column: 2;
 }
 
 .rodape{
   background: #fff;
-  width: 100%;
   text-align: center;
   padding: 2.5rem;
   box-sizing: border-box;
 }
 
-header{
+header, footer{
   width: 100%;
-  
 }
 
 .logo{
@@ -133,8 +162,3 @@ header{
   margin: 2.5rem 0rem 2.5rem 0rem;
 }
 
-.links a:hover{
-  background: #e21;
-  color: #fff;
-  transition: 0.3s ease-in-out;
-}
