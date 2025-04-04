@@ -3,13 +3,31 @@
   padding: 0rem;
 }
 
+:root{
+  --bg1: #f7f7f7;
+  --bg2: #ffffff;
+  --text: #000000;
+  --subtitle-bg: rgba(0, 0, 0, 0.2);
+  --wave: url('./img/onda.svg');
+}
+
+@media(prefers-color-scheme:dark) {
+  :root{
+    --bg1: #0f0f0f;
+    --bg2: #111010;
+    --text: #ffffff;
+    --subtitle-bg: rgba(255, 253, 253, .3);
+    --wave: url('./img/onda-dark.svg');
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f7f7f7;
+  background: var(--bg1);
   display: grid;
   gap: 3.75rem;
   justify-items: center;
-
+  color: var(--text);
 }
 
 .bike{
@@ -44,13 +62,13 @@ p{
 }
 
 .links a{
-  background: #ffff;
+  background: var(--bg2)f;
   padding: 0.9375rem 1.875rem;
   border-radius: 0.25rem;
-  color: #000000;
+  color: var(--text);
   text-transform: uppercase;
   display: block;
-  border: 0.0625rem solid #fff;
+  border: 0.0625rem solid var(--bg2);
 }
 
 .links a:hover{
@@ -65,7 +83,7 @@ p{
 }
 
 .introducao{
-  background: #fff;
+  background: var(--bg2);
   padding: 2.5rem;
   text-align: right; 
   position: relative;
@@ -96,7 +114,7 @@ p{
 
 .button{
   background: #e21;
-  color: #fff;
+  color: #ffffff;
   padding: 0.9375rem 1.875rem;
   border-radius: 0.25rem;
   text-transform: uppercase;
@@ -109,17 +127,17 @@ p{
 }
 
 .subtitulo{
-  background: url('./img/onda.svg');
+  background: var(--wave);
   font-size: 4rem;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.2);
+  color: var(--subtitle-bg);
   text-align: right;
   padding: 2.5rem;
   place-self: center;
 }	
 
 .vantagens{
-  background: #fff;
+  background: var(--bg2);
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -132,6 +150,7 @@ p{
   grid-template-columns: auto 1fr;
   gap: 0.625rem 1.25rem;
   padding: 1.25rem;
+  background: var(--bg2);
 }
 
 
@@ -141,7 +160,7 @@ p{
 }
 
 .vantagens-item:nth-child(odd){
-  background: #f7f7f7;
+  background: var(--bg1);
 }
 
 .vantagens-item p{
@@ -149,7 +168,7 @@ p{
 }
 
 .rodape{
-  background: #fff;
+  background: var(--bg2);
   text-align: center;
   padding: 2.5rem;
   box-sizing: border-box;
@@ -166,6 +185,7 @@ footer{
 }
 
 .logo{
+  color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
